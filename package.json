@@ -1,0 +1,61 @@
+{
+  "name": "@magic-spells/event-emitter",
+  "version": "0.1.0",
+  "description": "Event emitter utility for magic spells.",
+  "author": "Cory Schulz",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/event-emitter.cjs.js",
+  "module": "dist/event-emitter.esm.js",
+  "unpkg": "dist/event-emitter.min.js",
+  "exports": {
+    ".": {
+      "import": "./dist/event-emitter.esm.js",
+      "require": "./dist/event-emitter.cjs.js",
+      "default": "./dist/event-emitter.esm.js"
+    }
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/magic-spells/event-emitter"
+  },
+  "homepage": "https://github.com/magic-spells/event-emitter#readme",
+  "bugs": {
+    "url": "https://github.com/magic-spells/event-emitter/issues"
+  },
+  "keywords": [
+    "event-emitter",
+    "events",
+    "utilities",
+    "javascript"
+  ],
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint src/ rollup.config.mjs",
+    "format": "prettier --write .",
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^8.57.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "eslint": "^8.0.0",
+    "globals": "^13.24.0",
+    "prettier": "^3.3.3",
+    "rollup": "^3.0.0"
+  }
+}
